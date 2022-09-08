@@ -1,30 +1,42 @@
 import java.util.ArrayList;
 
-public class Kit extends Articulo{
-    public ArrayList<Producto> productos = new ArrayList<>();
-    public int ventas;
+public class Kit extends Articulo {
 
-    public Kit(String nombre, int precio, ArrayList<Producto> productos, int ventas){
-        this.nombre = nombre;
-        this.precio = precio;
-        this.productos = productos;
-        this.ventas = ventas;
+	private int codigo;
+	private ArrayList<Producto> productos = new ArrayList<>();
+	private int ventas;
 
-    }
+	public Kit(int codigo, String nombre, int precio, ArrayList<Producto> productos, int ventas) {
+		super(nombre, precio);
+		this.codigo = codigo;
+//        this.nombre = nombre;
+//        this.precio = precio;
+		this.productos = productos;
+		this.ventas = ventas;
 
-    public String getNombre(){
-        return this.nombre;
-    }
+	}
 
-    public ArrayList<Producto> getProductos(){
-        return this.productos;
-    }
+	public int getCodigo() {
+		return codigo;
+	}
 
-    public int getPrecio(){
-        return this.precio;
-    }
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
 
-    public int getVentas(){
-        return this.ventas;
-    }
+	public ArrayList<Producto> getProductos() {
+		return productos;
+	}
+
+	public void setProductos(ArrayList<Producto> productos) {
+		this.productos = productos;
+	}
+
+	public int getVentas() {
+		return ventas;
+	}
+
+	public void setVentas(int ventas) {
+		this.ventas = ventas;
+	}
 }

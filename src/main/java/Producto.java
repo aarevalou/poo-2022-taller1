@@ -1,23 +1,21 @@
-public class Producto extends Articulo{
+public class Producto extends Articulo {
 
-    public int cantidad;
+    private int cantidad;
 
     public Producto(String nombre, int cantidad, int precio){
-        this.nombre = nombre;
+    	super(nombre, precio);
+//        this.nombre = nombre;
         this.cantidad = cantidad;
-        this.precio = precio;
+//        this.precio = precio;
 
     }
 
-    public String getNombre(){
-        return this.nombre;
-    }
 
     public int getCantidad(){
         return this.cantidad;
     }
-
-    public int getPrecio(){
-        return this.precio;
+    
+    public void setCantidad(int cantidad) {
+    	this.cantidad = cantidad;
     }
 }
